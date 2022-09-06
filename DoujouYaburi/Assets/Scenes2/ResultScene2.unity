@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retryButton: {fileID: 688037973}
-  clear: 1
+  clear: 0
 --- !u!1 &681177244
 GameObject:
   m_ObjectHideFlags: 0
