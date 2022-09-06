@@ -5,6 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  m_Scenes: []
+=======
+>>>>>>> doujouyaburi/master
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Ingame.unity
@@ -18,7 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes2/TitleScene2.unity
     guid: 8a07e3fb5a08d404cbcc77d5f1a860ed
+<<<<<<< HEAD
 =======
   m_Scenes: []
 >>>>>>> 03ebec174fb1ee0b4966b2fb6febfb90a4d5f7cf
+=======
+>>>>>>> origin/kyoya
+>>>>>>> doujouyaburi/master
   m_configObjects: {}
