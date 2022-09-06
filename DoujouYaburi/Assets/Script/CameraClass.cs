@@ -6,18 +6,20 @@ public class CameraClass : MonoBehaviour
 {
     Camera cam;
     [SerializeField] float zoom = 0;
+    [SerializeField] float zoomSpeed = 0;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Shake(5.0f, 0.05f));
+        //StartCoroutine(Shake(5.0f, 0.05f));
         cam = this.gameObject.GetComponent<Camera>();
-        cam.orthographicSize  = zoom;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        var scroll = Input.mouseScrollDelta.y * Time.deltaTime * zoomSpeed;
+        cam.orthographicSize += scroll;
     }
     public IEnumerator Shake(float duration, float magnitude)
     {
