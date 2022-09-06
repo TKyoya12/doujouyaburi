@@ -9,17 +9,17 @@ public class PlayerScript : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     // 非公開変数
-    float axisH = 0;    //横
-    float axisV = 0;    //縦
     float speed = 0f;
     float moveSpeedH = 0;
     float moveSpeedV = 0;
 
     //インスペクタ表示変数
-    [SerializeField] float sizeH = 1f;
-    [SerializeField] float sizeV = 1f;
     [SerializeField] Sprite empty;
     [SerializeField] Sprite holding;
+    [SerializeField] float defaultSpeed;
+    [SerializeField] float dashSpeed;
+
+
 
     // 公開変数
     public bool gotA = false;  //アイテムAを手に入れたか
@@ -37,25 +37,32 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        axisH = Input.GetAxisRaw("Horizontal");    
-        axisV = Input.GetAxisRaw("Vertical");      
-
-        if(!(axisH == 0))
+        moveSpeedV = 0;
+        moveSpeedH = 0;
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.localScale = new Vector3(axisH * sizeH, 1f * sizeV, 1f);
+            moveSpeedV = speed;
         }
-
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.S))
         {
-            speed = 5f;
+            moveSpeedV = -speed;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveSpeedH = -speed;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveSpeedH = speed;
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = dashSpeed;
         }
         else
         {
-            speed = 3f;
+            speed = defaultSpeed;
         }
-
-        moveSpeedH = axisH * speed;
-        moveSpeedV = axisV * speed;
     }
 
     void FixedUpdate()
