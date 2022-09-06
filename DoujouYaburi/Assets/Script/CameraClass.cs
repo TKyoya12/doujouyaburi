@@ -13,6 +13,7 @@ public class CameraClass : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //
         //StartCoroutine(Shake(5.0f, 0.05f));
         cam = this.gameObject.GetComponent<Camera>();        
     }
