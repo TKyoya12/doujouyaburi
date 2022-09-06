@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class ItemEffect : MonoBehaviour
 {
-    public void OnCompleteAnimation()
+    void Start()
+    {
+        Invoke("OnCompleteAnimation",0.4f);
+    }
+
+
+    void OnCompleteAnimation()
     {
         Destroy(this.gameObject);
     }
