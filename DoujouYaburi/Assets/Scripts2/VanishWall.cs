@@ -33,6 +33,18 @@ public class VanishWall : MonoBehaviour
 
             if (item && Input.GetKey(KeyCode.Space))
             {
+                switch (type)
+                {
+                    case Item.ItemType.A:
+                        player.gotA = false;
+                        break;
+                    case Item.ItemType.B:
+                        player.gotB = false;
+                        break;
+                    case Item.ItemType.C:
+                        player.gotC = false;
+                        break;
+                }
                 this.gameObject.SetActive(false);
             }
         }
