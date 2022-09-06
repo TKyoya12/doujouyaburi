@@ -5,12 +5,13 @@ using UnityEngine;
 public class CameraClass : MonoBehaviour
 {
     Camera cam;
+    [SerializeField] float zoom = 0;
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(Shake(5.0f, 0.05f));
+        StartCoroutine(Shake(5.0f, 0.05f));
         cam = this.gameObject.GetComponent<Camera>();
-        cam.orthographicSize  = 10;
+        cam.orthographicSize  = zoom;
     }
 
     // Update is called once per frame
