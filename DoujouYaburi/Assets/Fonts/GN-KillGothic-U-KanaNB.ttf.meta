@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5539dd0438cbaec40b280a49eb0dd95b
+guid: 1264e627c0714154195fb59167404bde
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - GN-KMBFont-UB-NewstyleKanaA
+  - GN-KMBFont-UB-NewstyleKanaB
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
