@@ -812,10 +812,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677ce5f6a48b3f847ab7352a369bd043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeH: 1
-  sizeV: 1
   empty: {fileID: 21300000, guid: 2bed11b04dec50946adae2d0a95d9c5e, type: 3}
   holding: {fileID: 21300000, guid: 1cb49e14c7d61154fb3a4de05d6c259f, type: 3}
+  defaultSpeed: 3
+  dashSpeed: 5
   gotA: 0
   gotB: 0
   gotC: 0
