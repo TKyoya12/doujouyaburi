@@ -15,12 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes2/GameScene2.unity
     guid: 40a654a98e3ffd14996de692b1a94d3d
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes2/GameScene.unity
     guid: af83e9011350d5648b63c5dd39105b80
   - enabled: 1
     path: Assets/Scenes/Ingame.unity
     guid: 7e07ede55f759b045b82356ee467ead5
   - enabled: 1
-    path: Assets/Scenes/New Scene.unity
+    path: Assets/Scenes/Demo Scene.unity
     guid: cea36acc90a9dca47b6482b54a28bb82
+  - enabled: 1
+    path: Assets/Scenes2/ResultScene2.unity
+    guid: 1f786397d798f474390f60de32c3bef5
   m_configObjects: {}

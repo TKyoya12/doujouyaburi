@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float minutes = 1;
-    [SerializeField] float seconds = 10;
+    int minutes = 1;
+    int seconds = 70;
+    [SerializeField] float timer = 0;
+    
     GameObject GOMinutes;
     GameObject GOSeconds;
     // Start is called before the first frame update
@@ -20,19 +22,13 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (minutes == 0)
+        timer -= Time.deltaTime;
+        if (timer < 0)
         {
-            
+            SceneManager.LoadScene("ResultScene2");
         }
-        if (seconds <= 0)
-        {
-            minutes--;
-            seconds = 59;
-        }
-        else
-        {
-            seconds -= Time.deltaTime;
-        }
+        minutes = (int)timer / 60;
+        seconds = (int)timer - (minutes * 60);
         GOMinutes.GetComponent<Text>().text = minutes.ToString("F0").PadLeft(2, '0'); ;
         GOSeconds.GetComponent<Text>().text = seconds.ToString("F0").PadLeft(2, '0'); ;
     }
