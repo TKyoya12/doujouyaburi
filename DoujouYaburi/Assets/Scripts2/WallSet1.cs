@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallSet : MonoBehaviour
+public class WallSet1 : MonoBehaviour
 {
     [SerializeField] int angle;     //1Å`6
     [SerializeField] int radius;    //1Å`
@@ -57,5 +57,6 @@ public class WallSet : MonoBehaviour
         position = new Vector3(x, y, z);
 
         transform.localPosition = position;
+        transform.rotation = Quaternion.Euler(0f, 0f, (angle - 1) * -60f);
     }
 }
