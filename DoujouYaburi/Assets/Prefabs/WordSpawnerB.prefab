@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4866347623166548951}
   - component: {fileID: 4866347623166548950}
-  - component: {fileID: -4817592587916234493}
+  - component: {fileID: -2386365942792121809}
   m_Layer: 0
-  m_Name: WordSpawner
+  m_Name: WordSpawnerB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,9 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d80a53e2cfe4144485840cdbf14bf0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  word: {fileID: 6069987694855545204, guid: 94927bccf14355541ae9f26572bf794c, type: 3}
-  isWord: 0
---- !u!61 &-4817592587916234493
+  word: {fileID: 1695300458746693325, guid: aa9d5632c22e4d94094d9095277fe0b1, type: 3}
+--- !u!61 &-2386365942792121809
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,7 +57,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -71,5 +70,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

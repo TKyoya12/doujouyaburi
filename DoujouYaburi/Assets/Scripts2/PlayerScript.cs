@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     // コンポーネント保存用変数
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
+    Animator animator;
 
     // 非公開変数
     float speed = 0f;
@@ -18,7 +19,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] Sprite holding;
     [SerializeField] float defaultSpeed = 3;
     [SerializeField] float dashSpeed = 5;
-    [SerializeField] GameObject itemEffect;
+
+
+    //[SerializeField] GameObject itemEffect;
 
 
     // 公開変数
@@ -32,6 +35,7 @@ public class PlayerScript : MonoBehaviour
         // Getcompornent
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,8 @@ public class PlayerScript : MonoBehaviour
     {
         moveSpeedV = 0;
         moveSpeedH = 0;
+
+
         if (Input.GetKey(KeyCode.W))
         {
             moveSpeedV = speed;
@@ -68,16 +74,9 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(moveSpeedH, moveSpeedV);
-        if(gotA || gotB || gotC)
-        {
-            spriteRenderer.sprite = holding;
-        }
-        else
-        {
-            spriteRenderer.sprite = empty;
-        }
     }
 
+<<<<<<< HEAD
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (!gotA && !gotB && !gotC)
@@ -101,5 +100,31 @@ public class PlayerScript : MonoBehaviour
                 collision.gameObject.transform.rotation);
             Destroy(collision.gameObject);
         }
+=======
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    Debug.Log("a");
+    //    if (!gotA && !gotB && !gotC)
+    //    {
+    //        switch (collision.gameObject.tag)
+    //        {
+    //            default:
+    //                break;
+    //            case "ItemA":
+    //                gotA = true;
+    //                break;
+    //            case "ItemB":
+    //                gotB = true;
+    //                break;
+    //            case "ItemC":
+    //                gotC = true;
+    //                break;
+    //        }
+    //        Instantiate(itemEffect,
+    //            collision.transform.position,
+    //            collision.transform.rotation);
+    //        Destroy(collision.gameObject);
+    //    }
+>>>>>>> origin/master
     }
 }

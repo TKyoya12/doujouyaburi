@@ -4,35 +4,58 @@ using UnityEngine;
 
 public class SpawnWord : MonoBehaviour
 {
-    [SerializeField]GameObject word;
+    [SerializeField] GameObject word;
     GameObject cube;
-    public bool isWord = false;
+    bool isWord = false;
+    bool inPlayer = false;
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!isWord)
+        if (!isWord)
         {
             isWord = true;
-            Invoke("spawnWord", 1.0f);
+            Invoke("WordSpawn", 1.0f);
         }
-        if(Input.GetKeyDown(KeyCode.Space) && isWord)
+        if (inPlayer)
         {
-            destroyWord();
+
+            if (Input.GetKeyDown(KeyCode.Space) && isWord)
+            {
+                DestroyWord();
+                Debug.Log("des");
+            }
         }
     }
-    public void destroyWord()
+    public void DestroyWord()
     {
         Destroy(cube);
         isWord = false;
-        Debug.Log("destroy");
+        inPlayer = false;
     }
-    public void spawnWord()
+    public void WordSpawn()
     {
         cube = Instantiate(word, this.transform.position, Quaternion.identity);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inPlayer = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inPlayer = false;
+        }
+    }
+
+
 }
