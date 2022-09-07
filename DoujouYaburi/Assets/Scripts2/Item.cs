@@ -22,7 +22,8 @@ public class Item : MonoBehaviour
             Instantiate(effect,
                 this.transform.position,
                 this.transform.rotation);
-            this.gameObject.SetActive(false);*/
+            Destroy(this.gameObject);
+            */
         }
     }
 }
