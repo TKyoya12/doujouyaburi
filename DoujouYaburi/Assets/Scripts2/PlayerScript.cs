@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     // コンポーネント保存用変数
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
+    Animator animator;
 
     // 非公開変数
     float speed = 0f;
@@ -18,7 +19,11 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] Sprite holding;
     [SerializeField] float defaultSpeed = 3;
     [SerializeField] float dashSpeed = 5;
+<<<<<<< HEAD
+
+=======
     [SerializeField] GameObject itemEffect;
+>>>>>>> doujouyaburi/09062117
 
 
     // 公開変数
@@ -32,6 +37,7 @@ public class PlayerScript : MonoBehaviour
         // Getcompornent
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,21 +45,28 @@ public class PlayerScript : MonoBehaviour
     {
         moveSpeedV = 0;
         moveSpeedH = 0;
+        //animator.SetBool("Bool",false);
+
+
         if (Input.GetKey(KeyCode.W))
         {
             moveSpeedV = speed;
+            //animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
             moveSpeedV = -speed;
+            animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.A))
         {
             moveSpeedH = -speed;
+            animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             moveSpeedH = speed;
+            animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -68,18 +81,22 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(moveSpeedH, moveSpeedV);
-        if(gotA || gotB || gotC)
-        {
-            spriteRenderer.sprite = holding;
-        }
-        else
-        {
-            spriteRenderer.sprite = empty;
-        }
+        //if(gotA || gotB || gotC)
+        //{
+        //    spriteRenderer.sprite = holding;
+        //}
+        //else
+        //{
+        //    spriteRenderer.sprite = empty;
+        //}
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+<<<<<<< HEAD
+=======
+        Debug.Log("a");
+>>>>>>> master
         if (!gotA && !gotB && !gotC)
         {
             switch (collision.gameObject.tag)
@@ -97,8 +114,13 @@ public class PlayerScript : MonoBehaviour
                     break;
             }
             Instantiate(itemEffect,
+<<<<<<< HEAD
                 collision.gameObject.transform.position,
                 collision.gameObject.transform.rotation);
+=======
+                collision.transform.position,
+                collision.transform.rotation);
+>>>>>>> master
             Destroy(collision.gameObject);
         }
     }
