@@ -17,8 +17,8 @@ public class PlayerScript : MonoBehaviour
     //インスペクタ表示変数
     [SerializeField] Sprite empty;
     [SerializeField] Sprite holding;
-    [SerializeField] float defaultSpeed;
-    [SerializeField] float dashSpeed;
+    [SerializeField] float defaultSpeed = 3;
+    [SerializeField] float dashSpeed = 5;
 
 
 
@@ -41,13 +41,13 @@ public class PlayerScript : MonoBehaviour
     {
         moveSpeedV = 0;
         moveSpeedH = 0;
-        animator.SetBool("Bool",false);
+        //animator.SetBool("Bool",false);
 
 
         if (Input.GetKey(KeyCode.W))
         {
             moveSpeedV = speed;
-            animator.SetBool("Bool", true);
+            //animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
