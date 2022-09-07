@@ -8,6 +8,7 @@ public class WallSet1 : MonoBehaviour
     [SerializeField] int radius;    //1Å`
 
     Transform Transform;
+    BoxCollider2D Collider2D;
     Vector3 position;
 
     float root3 = Mathf.Sqrt(3);
@@ -54,9 +55,11 @@ public class WallSet1 : MonoBehaviour
     void Start()
     {
         Transform = GetComponent<Transform>();
+        Collider2D = GetComponent<BoxCollider2D>();
         position = new Vector3(x, y, z);
 
         transform.localPosition = position;
         transform.rotation = Quaternion.Euler(0f, 0f, (angle - 1) * -60f);
+        Collider2D.size = new Vector2(radius * 8,1);
     }
 }

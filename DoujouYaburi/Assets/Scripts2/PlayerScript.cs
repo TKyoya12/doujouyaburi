@@ -17,9 +17,13 @@ public class PlayerScript : MonoBehaviour
     //インスペクタ表示変数
     [SerializeField] Sprite empty;
     [SerializeField] Sprite holding;
-    [SerializeField] float defaultSpeed;
-    [SerializeField] float dashSpeed;
+    [SerializeField] float defaultSpeed = 3;
+    [SerializeField] float dashSpeed = 5;
+<<<<<<< HEAD
 
+=======
+    [SerializeField] GameObject itemEffect;
+>>>>>>> doujouyaburi/09062117
 
 
     // 公開変数
@@ -41,13 +45,13 @@ public class PlayerScript : MonoBehaviour
     {
         moveSpeedV = 0;
         moveSpeedH = 0;
-        animator.SetBool("Bool",false);
+        //animator.SetBool("Bool",false);
 
 
         if (Input.GetKey(KeyCode.W))
         {
             moveSpeedV = speed;
-            animator.SetBool("Bool", true);
+            //animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -85,5 +89,31 @@ public class PlayerScript : MonoBehaviour
         //{
         //    spriteRenderer.sprite = empty;
         //}
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("a");
+        if (!gotA && !gotB && !gotC)
+        {
+            switch (collision.gameObject.tag)
+            {
+                default:
+                    break;
+                case "ItemA":
+                    gotA = true;
+                    break;
+                case "ItemB":
+                    gotB = true;
+                    break;
+                case "ItemC":
+                    gotC = true;
+                    break;
+            }
+            Instantiate(itemEffect,
+                collision.transform.position,
+                collision.transform.rotation);
+            Destroy(collision.gameObject);
+        }
     }
 }
