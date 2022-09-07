@@ -16,9 +16,9 @@ public class PlayerScript : MonoBehaviour
     //インスペクタ表示変数
     [SerializeField] Sprite empty;
     [SerializeField] Sprite holding;
-    [SerializeField] float defaultSpeed;
-    [SerializeField] float dashSpeed;
-
+    [SerializeField] float defaultSpeed = 3;
+    [SerializeField] float dashSpeed = 5;
+    [SerializeField] GameObject itemEffect;
 
 
     // 公開変数
@@ -75,6 +75,31 @@ public class PlayerScript : MonoBehaviour
         else
         {
             spriteRenderer.sprite = empty;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+         if(!gotA && !gotB && !gotC)
+        {
+            switch(collision.gameObject.tag)
+            {
+                default:
+                    break;
+                case "ItemA":
+                    gotA = true;
+                    break;
+                case "ItemB":
+                    gotB = true;
+                    break;
+                case "ItemC":
+                    gotC = true;
+                    break;
+            }
+            Instantiate(itemEffect,
+                collision.gameObject.transform.position,
+                collision.gameObject.transform.rotation);
+            collision.gameObject.SetActive(false);
         }
     }
 }
