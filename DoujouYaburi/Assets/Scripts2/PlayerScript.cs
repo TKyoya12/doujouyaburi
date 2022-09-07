@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] float dashSpeed = 5;
 
 
-    [SerializeField] GameObject itemEffect;
+    //[SerializeField] GameObject itemEffect;
 
 
     // åˆäJïœêî
@@ -76,29 +76,29 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(moveSpeedH, moveSpeedV);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("a");
-        if (!gotA && !gotB && !gotC)
-        {
-            switch (collision.gameObject.tag)
-            {
-                default:
-                    break;
-                case "ItemA":
-                    gotA = true;
-                    break;
-                case "ItemB":
-                    gotB = true;
-                    break;
-                case "ItemC":
-                    gotC = true;
-                    break;
-            }
-            Instantiate(itemEffect,
-                collision.transform.position,
-                collision.transform.rotation);
-            Destroy(collision.gameObject);
-        }
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    Debug.Log("a");
+    //    if (!gotA && !gotB && !gotC)
+    //    {
+    //        switch (collision.gameObject.tag)
+    //        {
+    //            default:
+    //                break;
+    //            case "ItemA":
+    //                gotA = true;
+    //                break;
+    //            case "ItemB":
+    //                gotB = true;
+    //                break;
+    //            case "ItemC":
+    //                gotC = true;
+    //                break;
+    //        }
+    //        Instantiate(itemEffect,
+    //            collision.transform.position,
+    //            collision.transform.rotation);
+    //        Destroy(collision.gameObject);
+    //    }
     }
 }

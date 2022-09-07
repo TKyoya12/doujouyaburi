@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnWord : MonoBehaviour
 {
-    [SerializeField]GameObject word;
+    [SerializeField] GameObject word;
     GameObject cube;
     bool isWord = false;
-    bool isPlayer = false;
+    bool inPlayer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class SpawnWord : MonoBehaviour
             isWord = true;
             Invoke("WordSpawn", 1.0f);
         }
-        if (isPlayer)
+        if (inPlayer)
         {
 
             if (Input.GetKeyDown(KeyCode.Space) && isWord)
@@ -31,11 +31,12 @@ public class SpawnWord : MonoBehaviour
                 Debug.Log("des");
             }
         }
-        }
-        public void DestroyWord()
+    }
+    public void DestroyWord()
     {
         Destroy(cube);
         isWord = false;
+        inPlayer = false;
     }
     public void WordSpawn()
     {
@@ -45,14 +46,14 @@ public class SpawnWord : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            isPlayer = true;
+            inPlayer = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            isPlayer = false;
+            inPlayer = false;
         }
     }
 
