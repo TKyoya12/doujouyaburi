@@ -100,5 +100,5 @@ public class PlayerScript : MonoBehaviour
     //            collision.transform.rotation);
     //        Destroy(collision.gameObject);
     //    }
-    }
+    //}
 }
