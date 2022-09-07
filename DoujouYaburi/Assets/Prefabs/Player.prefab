@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 7493867333777634129}
   - component: {fileID: 4734222801762325457}
   - component: {fileID: -7705021320924207646}
+<<<<<<< HEAD
   - component: {fileID: 1112008486428414998}
+=======
+  - component: {fileID: -4510231652515151147}
+>>>>>>> origin/master
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -126,15 +130,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+<<<<<<< HEAD
   m_Constraints: 4
 --- !u!61 &1112008486428414998
 BoxCollider2D:
+=======
+  m_Constraints: 0
+--- !u!95 &-4510231652515151147
+Animator:
+  serializedVersion: 4
+>>>>>>> origin/master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7493867333777634142}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -153,3 +165,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7, y: 2.7}
   m_EdgeRadius: 0
+=======
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+>>>>>>> origin/master
