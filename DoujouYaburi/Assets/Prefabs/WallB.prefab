@@ -139,5 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4305c29d3623434ca7c644247bcb1b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wall1: {fileID: 21300000, guid: c260adac7b292b74daff4323da21023e, type: 3}
+  wall2: {fileID: 21300000, guid: 06188e3a00e1e4c40b205e3f41116d46, type: 3}
+  wall3: {fileID: 21300000, guid: 40872b46186dedf4fb3c0e3bf1462286, type: 3}
+  wall4: {fileID: 21300000, guid: 813408fa1ba089a46800bac57afda936, type: 3}
+  wall5: {fileID: 21300000, guid: a6b358bd9714df24697680173db21f09, type: 3}
   angle: 1
   radius: 1

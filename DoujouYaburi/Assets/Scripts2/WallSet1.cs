@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class WallSet1 : MonoBehaviour
 {
+    [SerializeField] Sprite wall1;
+    [SerializeField] Sprite wall2;
+    [SerializeField] Sprite wall3;
+    [SerializeField] Sprite wall4;
+    [SerializeField] Sprite wall5;
+
     [SerializeField] int angle;     //1Å`6
     [SerializeField] int radius;    //1Å`
 
     Transform Transform;
     BoxCollider2D Collider2D;
-    Vector3 position;
+    SpriteRenderer spriteRenderer;
 
+    Vector3 position;
     float root3 = Mathf.Sqrt(3);
     float x = 0;
     float y = 0;
@@ -56,10 +63,30 @@ public class WallSet1 : MonoBehaviour
     {
         Transform = GetComponent<Transform>();
         Collider2D = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         position = new Vector3(x, y, z);
 
         transform.localPosition = position;
         transform.rotation = Quaternion.Euler(0f, 0f, (angle - 1) * -60f);
-        Collider2D.size = new Vector2(radius * 8,1);
+        Collider2D.size = new Vector2(radius * 8 + 1,1);
+        switch (radius)
+        {
+            case 1:
+                spriteRenderer.sprite = wall1;
+                break;
+            case 2:
+                spriteRenderer.sprite = wall2;
+                break;
+            case 3:
+                spriteRenderer.sprite = wall3;
+                break;
+            case 4:
+                spriteRenderer.sprite = wall4;
+                break;
+            case 5:
+                spriteRenderer.sprite = wall5;
+                break;
+        }
     }
 }
