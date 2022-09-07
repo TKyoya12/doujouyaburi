@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  player: {fileID: 0}
+  player: {fileID: 4734222801762325457, guid: 527610deb63d35247bc07f74a5d19cd9, type: 3}
 --- !u!114 &5945653377445875928
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -125,5 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  player: {fileID: 0}
   effect: {fileID: 8133783123248897051, guid: a0202803195085b40973c9b06366f48a, type: 3}

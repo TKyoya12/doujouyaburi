@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1112008486428414998}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7493867333777634142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,10 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677ce5f6a48b3f847ab7352a369bd043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  empty: {fileID: 0}
-  holding: {fileID: 0}
-  defaultSpeed: 0
-  dashSpeed: 0
+  empty: {fileID: 21300000, guid: 2bed11b04dec50946adae2d0a95d9c5e, type: 3}
+  holding: {fileID: 21300000, guid: f2b9a48d3ec779d4e84629b25b1f87d9, type: 3}
+  defaultSpeed: 3
+  dashSpeed: 5
+  itemEffect: {fileID: 8133783123248897051, guid: a0202803195085b40973c9b06366f48a, type: 3}
   gotA: 0
   gotB: 0
   gotC: 0
