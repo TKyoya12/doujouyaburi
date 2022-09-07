@@ -139,5 +139,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03547d5e0b345294b8a45bb7f8ded2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 2
+  angle: 1
   radius: 1
