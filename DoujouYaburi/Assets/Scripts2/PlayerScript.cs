@@ -19,11 +19,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] Sprite holding;
     [SerializeField] float defaultSpeed = 3;
     [SerializeField] float dashSpeed = 5;
-<<<<<<< HEAD
 
-=======
+
     [SerializeField] GameObject itemEffect;
->>>>>>> doujouyaburi/09062117
 
 
     // åˆäJïœêî
@@ -45,28 +43,23 @@ public class PlayerScript : MonoBehaviour
     {
         moveSpeedV = 0;
         moveSpeedH = 0;
-        //animator.SetBool("Bool",false);
 
 
         if (Input.GetKey(KeyCode.W))
         {
             moveSpeedV = speed;
-            //animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
             moveSpeedV = -speed;
-            animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.A))
         {
             moveSpeedH = -speed;
-            animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             moveSpeedH = speed;
-            animator.SetBool("Bool", true);
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -81,14 +74,6 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(moveSpeedH, moveSpeedV);
-        //if(gotA || gotB || gotC)
-        //{
-        //    spriteRenderer.sprite = holding;
-        //}
-        //else
-        //{
-        //    spriteRenderer.sprite = empty;
-        //}
     }
 
     void OnTriggerEnter2D(Collider2D collision)
