@@ -19,7 +19,11 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] Sprite holding;
     [SerializeField] float defaultSpeed = 3;
     [SerializeField] float dashSpeed = 5;
+<<<<<<< HEAD
 
+=======
+    [SerializeField] GameObject itemEffect;
+>>>>>>> doujouyaburi/09062117
 
 
     // åˆäJïœêî
@@ -85,5 +89,30 @@ public class PlayerScript : MonoBehaviour
         //{
         //    spriteRenderer.sprite = empty;
         //}
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+         if(!gotA && !gotB && !gotC)
+        {
+            switch(collision.gameObject.tag)
+            {
+                default:
+                    break;
+                case "ItemA":
+                    gotA = true;
+                    break;
+                case "ItemB":
+                    gotB = true;
+                    break;
+                case "ItemC":
+                    gotC = true;
+                    break;
+            }
+            Instantiate(itemEffect,
+                collision.gameObject.transform.position,
+                collision.gameObject.transform.rotation);
+            collision.gameObject.SetActive(false);
+        }
     }
 }

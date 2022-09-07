@@ -10,7 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4866347623166548951}
   - component: {fileID: 4866347623166548950}
+<<<<<<< HEAD:DoujouYaburi/Assets/Prefabs/WordSpawnerA.prefab
   - component: {fileID: -2386365942792121809}
+=======
+  - component: {fileID: -4817592587916234493}
+>>>>>>> doujouyaburi/09062117:DoujouYaburi/Assets/Prefabs/WordSpawner.prefab
   m_Layer: 0
   m_Name: WordSpawnerA
   m_TagString: Untagged
@@ -45,8 +49,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d80a53e2cfe4144485840cdbf14bf0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:DoujouYaburi/Assets/Prefabs/WordSpawnerA.prefab
   word: {fileID: 4893203396421435254, guid: 52ed7a82211365142a97edd78c1ef20e, type: 3}
 --- !u!61 &-2386365942792121809
+=======
+  word: {fileID: 6069987694855545204, guid: 94927bccf14355541ae9f26572bf794c, type: 3}
+  isWord: 0
+--- !u!61 &-4817592587916234493
+>>>>>>> doujouyaburi/09062117:DoujouYaburi/Assets/Prefabs/WordSpawner.prefab
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,7 +67,11 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+<<<<<<< HEAD:DoujouYaburi/Assets/Prefabs/WordSpawnerA.prefab
   m_UsedByEffector: 1
+=======
+  m_UsedByEffector: 0
+>>>>>>> doujouyaburi/09062117:DoujouYaburi/Assets/Prefabs/WordSpawner.prefab
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -70,5 +84,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< HEAD:DoujouYaburi/Assets/Prefabs/WordSpawnerA.prefab
   m_Size: {x: 1, y: 1}
+=======
+  m_Size: {x: 2, y: 2}
+>>>>>>> doujouyaburi/09062117:DoujouYaburi/Assets/Prefabs/WordSpawner.prefab
   m_EdgeRadius: 0
