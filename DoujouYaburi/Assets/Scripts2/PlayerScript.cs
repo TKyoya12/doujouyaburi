@@ -78,11 +78,12 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-         if(!gotA && !gotB && !gotC)
+        Debug.Log("a");
+        if (!gotA && !gotB && !gotC)
         {
-            switch(collision.gameObject.tag)
+            switch (collision.gameObject.tag)
             {
                 default:
                     break;
@@ -97,9 +98,9 @@ public class PlayerScript : MonoBehaviour
                     break;
             }
             Instantiate(itemEffect,
-                collision.gameObject.transform.position,
-                collision.gameObject.transform.rotation);
-            collision.gameObject.SetActive(false);
+                collision.transform.position,
+                collision.transform.rotation);
+            Destroy(collision.gameObject);
         }
     }
 }

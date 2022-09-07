@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1695733973251088811, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
 --- !u!1001 &315769518
@@ -308,6 +312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -120
       objectReference: {fileID: 0}
+    - target: {fileID: 7101268548685698585, guid: 63c4779f914712842a44a64dee52161e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     - target: {fileID: 8432061279096668228, guid: 63c4779f914712842a44a64dee52161e, type: 3}
       propertyPath: angle
       value: 4
@@ -329,6 +337,10 @@ PrefabInstance:
       propertyPath: radius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3553346339324544552, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     - target: {fileID: 3553346339324544554, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -398,6 +410,10 @@ PrefabInstance:
       propertyPath: radius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3774948142511115796, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     - target: {fileID: 3774948142511115797, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
       propertyPath: m_Name
       value: WallB (3)
@@ -473,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 1228302587}
     - target: {fileID: 3553346339324544555, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3553346339324544555, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -572,6 +588,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -60
       objectReference: {fileID: 0}
+    - target: {fileID: 4975141883053524755, guid: 4ecf46c8f9c9f2f408fd9d348b67ee48, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     - target: {fileID: 4975141883053524767, guid: 4ecf46c8f9c9f2f408fd9d348b67ee48, type: 3}
       propertyPath: m_Name
       value: WallA2
@@ -603,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1695733973251088810, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1695733973251088810, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -687,6 +707,7 @@ MonoBehaviour:
   holding: {fileID: 21300000, guid: f2b9a48d3ec779d4e84629b25b1f87d9, type: 3}
   defaultSpeed: 3
   dashSpeed: 5
+  itemEffect: {fileID: 8133783123248897051, guid: a0202803195085b40973c9b06366f48a, type: 3}
   gotA: 0
   gotB: 0
   gotC: 0
@@ -755,7 +776,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1228302590
 Rigidbody2D:
@@ -829,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774948142511116009, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3774948142511116009, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -888,6 +909,10 @@ PrefabInstance:
       propertyPath: radius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3774948142511115796, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     - target: {fileID: 3774948142511115797, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
       propertyPath: m_Name
       value: WallB (2)
@@ -963,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 1228302587}
     - target: {fileID: 3553346339324544555, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3553346339324544555, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1087,6 +1112,10 @@ PrefabInstance:
       propertyPath: radius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3553346339324544552, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     - target: {fileID: 3553346339324544554, guid: b1979b0e796c5374c9c1f08dae7924b2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1227,7 +1256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774948142511116009, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3774948142511116009, guid: 20adf3b6ad3a5324eb4be40c280e1c55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,6 +1451,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -60
       objectReference: {fileID: 0}
+    - target: {fileID: 1695733973251088811, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
 --- !u!1001 &2119952367
@@ -1443,6 +1476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallB2
       objectReference: {fileID: 0}
+    - target: {fileID: 6728614083417508718, guid: 9b42fe7f38ed2d647816355e4adf8552, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1228302587}
     - target: {fileID: 6728614083417508719, guid: 9b42fe7f38ed2d647816355e4adf8552, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1510,7 +1547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1695733973251088810, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1695733973251088810, guid: e9f8949acfdbadd45ad0bebf2cd466fb, type: 3}
       propertyPath: m_LocalPosition.x
